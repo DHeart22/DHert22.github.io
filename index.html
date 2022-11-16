@@ -1,0 +1,88 @@
+
+
+
+面对对象重要思想;
+    把对象当参数，
+    把对象当属性
+    把对象当变量
+    	进程：process
+	线程：thread
+
+WPF绑定：
+  控件之间绑定：
+   1).先是事件驱动
+   2).进阶为binding，绑定到什么控件上？控件的什么属性？什么模式的绑定？
+  UI与业务绑定：
+   1).命令绑定command
+   2).属性修改方法绑定
+
+
+1B就是1个字节。
+Byte、KB、B、MB、GB之间的关系是： 
+Bit——比特
+B  ——字节 
+KB——千字节 
+MB——兆字节 
+GB——吉字节 
+TB——太字节 
+1B=8 Bit
+
+程序员编写人们可读的代码。然后将该代码输入 C# 编译器。
+C# 编译器会将代码编译成高效、机器可读的托管代码，称为字节码。
+然后，即时编译器 (JIT) 会将字节码编译为本机或机器语言。
+当程序运行时，CPU会直接执行这段代码。
+
+CTS：Common Type System 通用系统类型。Int32、Int16→int、String→string、Boolean→bool
+CLS：Common Language Specification 通用语言规范。不同语言语法的不同。
+CLR：Common Language Runtime 公共语言运行时，就是.Net提供的那些类
+JIT JIT 是 just in time 的缩写, 也就是即时编译编译器
+
+看花容易绣花难
+加了event，可以限制变量被外部调用，只能在声明事件的地方调用
+winform点击事件：点击触发事件，事件上承载了button_click方法，再执行方法
+
+
+lamda代替匿名函数，需要委托发挥作用
+
+卡界面就得新开新线程，如果还卡就还开线程（再包一层Task）
+
+
+
+【WPF的绑定、命令、样式、模板、触发器、动画、行为、转换器】
+
+
+
+ this.Invoke(new Action(()=>       //nvoke(委托实例)
+
+    {
+
+        button.Text="关闭";
+
+    }));
+
+
+
+【匿名方法：与委托结合使用；
+  delegate void CountIt(int end);
+  CountIt count = delegate(int end)
+            {
+                for (int i = 0; i < end; i++)
+                    this.Text = i.ToString ();
+            };
+            count(6);
+
+
+ delegate int  CountIt(int end);
+
+            CountIt count = delegate(int end)
+            {
+                int sun=0;
+                for (int i = 0; i < end; i++)
+                  sun+=i ;
+                return sun;
+            };
+            MessageBox.Show(count(6).ToString ());
+】
+
+
+Task.Run()    //里面参数范围比较广
